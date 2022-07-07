@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
     "jest": "^28.1.1",
     "nodemon": "^2.0.16"
   },
@@ -8,9 +10,13 @@
   "description": "A node.js command-line application that takes in information about employees on a software engineering team.",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
+  "scripts": {
+    "test": "jest",
   "author": "Andrew Towers",
   "license": "ISC"
+  }
 }
