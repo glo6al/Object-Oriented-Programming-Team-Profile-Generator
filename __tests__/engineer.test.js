@@ -11,3 +11,26 @@ test("Can create a github.", () => {
   );
   expect(employeeInstance.github).toBe(testGithub);
 });
+
+test("Testing getGithub will return github.", () => {
+  const testGithub = "Andrew";
+  const employeeInstance = new Engineer(
+    "Andrew",
+    2,
+    "towers.a@gmail.com",
+    testGithub
+  );
+  expect(employeeInstance.getGithub()).toBe(testGithub);
+});
+
+test("Testing role.", () => {
+  const returnValue = "Engineer";
+  const employeeInstance = new Engineer(
+    "Andrew",
+    2,
+    "towers.a@gmail.com",
+    returnValue
+  );
+  ("Andrew");
+  expect(employeeInstance.getRole()).toBe(returnValue);
+});
