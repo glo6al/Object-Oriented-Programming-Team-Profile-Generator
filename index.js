@@ -1,18 +1,17 @@
 const Inquirer = require("inquirer");
-const Fs = require("fs");
+// import Inquirer from "inquirer";
+const fs = require("fs");
 const Employee = require("./lib/employee");
 const Engineer = require("./lib/engineer");
-const Intern = require("intern");
-const Manager = require("manager");
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+const Intern = require("./lib/intern");
+const Manager = require("./lib/manager");
 const generateEmployeePage = require("./src/template");
 
 //array to hold employee input
 const employeeArray = [];
 
 function renderEmployees() {
-  //run inquierer prompt
+  //run inquirer prompt
   function createEmployees() {
     Inquirer.prompt([
       {
@@ -160,7 +159,17 @@ function renderEmployees() {
   function writeHtml() {
     console.log("Team created!");
 
-    Fs.writeFileSync(outputPath, generateEmployeePage(employeeArray), "UTF-8");
+    fs.writeFile(
+      "./src/index.html",
+      generateEmployeePage(employeeArray),
+      (err) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Successfully generated your HTML");
+        }
+      }
+    );
   }
 
   createEmployees();

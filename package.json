@@ -1,22 +1,28 @@
 {
-  "dependencies": {
-    "inquirer": "^8.2.4"
-  },
-  "devDependencies": {
-    "jest": "^28.1.1",
-    "nodemon": "^2.0.16"
-  },
   "name": "team-profile-generator",
-  "description": "A node.js command-line application that takes in information about employees on a software engineering team.",
   "version": "1.0.0",
+  "description": "team generator challenge",
   "main": "index.js",
+  "type": "",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "test": "jest",
-  "author": "Andrew Towers",
-  "license": "ISC"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glo6al/challenge10-glo6al.git"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^6.5.2",
+    "node": "^18.5.0",
+    "node-fetch": "^3.2.6",
+    "tmp": "^0.2.1"
   }
 }
